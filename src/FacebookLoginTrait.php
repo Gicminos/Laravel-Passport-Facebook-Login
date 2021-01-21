@@ -58,7 +58,7 @@ trait FacebookLoginTrait
 				// Looks for a user with same facebook_id
                 $user = $userModel::where($facebook_id_column, $fbUser['id'])->first();
                 if (!$user) {
-                    // Looks for a user with same email as Facebok
+                    // Looks for a user with same email as Facebook
                     $user = $userModel::where($email_column, $fbUser['email'])->first();
 
                     // None user found, create user
